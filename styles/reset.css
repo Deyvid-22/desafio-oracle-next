@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root{
+    --bg-round:#F3F5FC;
+    --color1:#0A3871;
+    --color2:#D8DFE8;
+}
+
+
+
+
