@@ -1,29 +1,28 @@
-document.querySelector(".criptografar").addEventListener("click", ()=>{
+document.querySelector(".encrypt").addEventListener("click", ()=>{
 
-    const vogalParaCripto = {'e':'enter','i': 'imes','a': 'ai','o': 'ober','u': 'ufat'};
+    const encrypt = {'e':'enter','i': 'imes','a': 'ai','o': 'ober','u': 'ufat'};
     const regex = /(a|e|i|o|u)/g;
 
     let text = document.querySelector("textarea").value;
-    let result =  decode(text,vogalParaCripto,regex);
+    let result =  decode(text,encrypt,regex);
 
     addClass(".card-container",".display-result");
     addText(result)
  })
  
-document.querySelector(".descriptografar").addEventListener("click", ()=>{
+document.querySelector(".decrypt").addEventListener("click", ()=>{
 
-    const criptoParaVogal = {enter: 'e',imes: 'i',ai: 'a',ober: 'o',ufat: 'u'};
+    const decrypt = {enter: 'e',imes: 'i',ai: 'a',ober: 'o',ufat: 'u'};
     const regex = /(enter|imes|ai|ober|ufat)/g;
 
     let text = document.querySelector("textarea").value;
-    let result = decode(text,criptoParaVogal,regex);
+    let result = decode(text,decrypt,regex);
    
-    // console.log(result)
     addClass(".card-container",".display-result");
     addText(result)
 })
 
-document.querySelector(".copy").addEventListener("click", ()=>{
+document.querySelector(".copy > button").addEventListener("click", ()=>{
     addClass(".display-result",".card-container");
     copy()
 })
@@ -39,10 +38,9 @@ function decode(text,fun,regex){
 }
 
 function addText(text){
-    
-    if(!text) return alert("preencha os campos necessarios")
-     document.querySelector("textarea").value = ""
-    document.querySelector(".display-result > p").innerHTML = text;
+    if(!text) return alert("Preencha os campos necessários")
+      document.querySelector("textarea").value = ""
+      document.querySelector(".display-result > p").innerHTML = text;
 }
 
 function copy() {

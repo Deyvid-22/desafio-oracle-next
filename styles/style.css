@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+    overflow: hidden;
     margin: auto;
     width: 100%;
     display: flex;
@@ -14,7 +15,7 @@ body {
 
 .logo {
     height: 100vh;
-  
+
 }
 
 .logo img {
@@ -60,8 +61,8 @@ textarea::placeholder {
     justify-content: space-between;
 }
 
-.criptografar,
-.descriptografar {
+.encrypt,
+.decrypt {
     width: 45%;
     height: 60px;
     border: none;
@@ -109,7 +110,7 @@ button:nth-child(2) {
 }
 
 .card-container {
-  
+
     width: 100%;
 }
 
@@ -118,14 +119,17 @@ button:nth-child(2) {
 }
 
 .display-result {
-   
     width: 80%;
     position: relative;
     padding: 20px 0px 110px 0px;
 }
 
-.display-result p{
-   width: 80%;
+.display-result p {
+    overflow: hidden;
+    height: 100%;
+    width: 90%;
+    font-size: 1.5rem;
+
 }
 
 .copy {
@@ -136,19 +140,19 @@ button:nth-child(2) {
 }
 
 .copy button {
-   width: 80%;
-   height: 3rem;
-   border: solid 1px var(--color1);
-   background-color: transparent;
-   color: var(--color1);
-   border-radius: 10px;
-   font-size: 1rem;
+    width: 80%;
+    height: 3rem;
+    border: solid 1px var(--color1);
+    background-color: transparent;
+    color: var(--color1);
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
 h3 {
     margin: auto;
     width: 300px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 p {
@@ -211,12 +215,10 @@ p {
     .img2 {
         display: none;
     }
-
-
-
 }
 
 @media (width <=600px) {
+
 
     .section2 {
         padding-block: 15px;
@@ -227,14 +229,11 @@ p {
         flex-direction: column;
     }
 
-    
-.criptografar,
-.descriptografar {
+
+    .encrypt,
+    .decrypt {
         width: 100%;
         margin-top: 20px;
     }
 
-    .text {
-        margin: 0px;
-    }
 }
